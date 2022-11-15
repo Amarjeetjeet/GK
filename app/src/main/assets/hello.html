@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="freshers">
+        <h2>Kotlin Interview Questions for Freshers</h2>
+    
+            <section class="ibpage-article-header" id="kotlin-data-types">
+              <h3>1.  What are the various data types available in Kotlin? Explain them.</h3>
+              <article class="ibpage-article">
+                <p>Primitive data types are the most basic data types in Kotlin, and all others are reference types like array and string. Kotlin contains all data types as objects. Following are the different data types available in Kotlin:-</p><figure class="image image_resized" style="width:75%;"><img data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/313/original/kotlin_data_types.jpg?1633684233" class="" src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/313/original/kotlin_data_types.jpg?1633684233"></figure><p><strong>Integer Data Type -</strong></p><figure class="table"><table>
+    <thead><tr>
+    <th>Data Type</th>
+    <th>Space Required</th>
+    </tr></thead>
+    <tbody>
+    <tr>
+    <td>byte</td>
+    <td>8 bits</td>
+    </tr>
+    <tr>
+    <td>short</td>
+    <td>16 bits</td>
+    </tr>
+    <tr>
+    <td>int</td>
+    <td>32 bits</td>
+    </tr>
+    <tr>
+    <td>long</td>
+    <td>64 bits</td>
+    </tr>
+    </tbody>
+    </table></figure><p><strong>Floating Point Data Type -&nbsp;</strong></p><figure class="table"><table>
+    <thead><tr>
+    <th>Data Type</th>
+    <th>Space Required</th>
+    </tr></thead>
+    <tbody>
+    <tr>
+    <td>float</td>
+    <td>32 bits</td>
+    </tr>
+    <tr>
+    <td>double</td>
+    <td>64 bits</td>
+    </tr>
+    </tbody>
+    </table></figure><p><strong>Boolean Data Type -&nbsp;</strong></p><p>True or false is the only bit of information represented by the Boolean data type. In Kotlin, the Boolean type is the same as in Java.&nbsp;</p><figure class="table"><table>
+    <thead><tr>
+    <th>Data Type</th>
+    <th>Space Required</th>
+    </tr></thead>
+    <tbody><tr>
+    <td>boolean</td>
+    <td>1 bit</td>
+    </tr></tbody>
+    </table></figure><p><strong>Character Data Type -&nbsp;</strong></p><p>Small letters (a-z), capital letters (A-Z), numerals (0-9), and other symbols are represented by the character data type.</p><figure class="table"><table>
+    <thead><tr>
+    <th>Data Type</th>
+    <th>Space Required</th>
+    </tr></thead>
+    <tbody><tr>
+    <td>char</td>
+    <td>8 bits</td>
+    </tr></tbody>
+    </table></figure><p><strong>String Data Type -</strong></p><p>Strings are represented in Kotlin by the type String. A string value is often a sequence of characters enclosed in double quotations ("). The space required in this case depends on the number of characters in the string.</p><p><strong>Array Data Type -</strong></p><p>The <strong>Array class</strong> in Kotlin is used to represent arrays. It has the get and set functions that, due to operator overloading conventions, can be used as&nbsp; ‘[]’&nbsp; as well. The space required by the array also depends on the number of elements it posses.</p>
+              </article>
+            </section>
+            <section class="ibpage-article-header" id="how-are-variables-declared-in-kotlin-explain-types-of-variables-in-kotlin-with-examples">
+              <h3>2. How are variables declared in Kotlin? What are the different types of variables in Kotlin? Explain with examples.</h3>
+              <article class="ibpage-article">
+                <p>Every variable in Kotlin must be declared before it can be used. An attempt to use a variable without declaring it results in a syntax error. The type of data you are authorised to put in the memory address is determined by the variable type declaration. The type of variable can be determined from the initialised value in the case of local variables.</p><p>For example,</p><p><code>var site = "interviewbit"</code></p><p>The above code declares a variable “site” of type String because the value with which the variable is initialised is a String.</p><p>There are broadly two types of variables in Kotlin. They are as follows:-</p><figure class="image image_resized" style="width:75%;"><img data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/314/original/types_of_variables_in_Kotlin.jpg?1633684843" class="" src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/314/original/types_of_variables_in_Kotlin.jpg?1633684843"></figure><ul><li>
+    <strong>Immutable Variables</strong> — Immutable variables are also known as read-only variables. They are declared using the val keyword. Once these variables have been declared, we cannot change their values.</li></ul><p>The <strong>syntax</strong> is as follows :</p><pre><code class="language-plaintext hljs">val variableName = value</code></pre><p>For example,</p><pre><code class="language-plaintext hljs">val sample = "interview"
+    sample = "interviewbit"    // results in compile time error</code></pre><p>The second line in the above code snippet would result in a compile-time error as expected.</p><p>Because it can be initialized with the value of a variable, an immutable variable is not a constant. It means that the value of an immutable variable does not need to be known at compile-time and that if it is defined inside a construct that is called several times, it can take on a different value with each function call. For example,&nbsp;</p><pre><code class="language-plaintext hljs">var sample = "interview"
+    val newSample = sample    // no compile time error</code></pre><p>The above code snippet runs fine and does not produce any errors.</p><ul><li>
+    <strong>Mutable Variables</strong> - In a mutable variable, the value of the variable can be changed. We use the keyword “var” to declare such variables.</li></ul><p>The <strong>syntax</strong> is as follows :</p><pre><code class="language-plaintext hljs">var variableName = value</code></pre><p>For example,</p><pre><code class="language-plaintext hljs">var sample = "interview"
+    sample = "fun"    // no compile time error</code></pre><p>The above code snippet runs fine and does not produce any errors.</p>
+              </article>
+            </section>
+            <section class="ibpage-article-header" id="kotlin-data-class">
+              <h3>3. What are data classes in Kotlin? Explain with a proper example.</h3>
+              <article class="ibpage-article">
+                <p>The Data class is a simple class that holds data and provides typical functions. To declare a class as a data class, use the data keyword.&nbsp;</p><p><strong>Syntax:</strong></p><pre><code class="language-plaintext hljs">data class className ( list_of_parameters)</code></pre><p>The following functions are automatically derived by the compiler for the data classes:</p><ul>
+    <li>
+    <strong>equals() </strong>- The equals() function returns true if two objects have the identical contents. It operates similarly to "==," although for Float and Double values it works differently.</li>
+    <li>
+    <strong>hashCode() </strong>- The hashCode() function returns the object's hashcode value.</li>
+    <li>
+    <strong>copy()</strong> - The copy() function is used to duplicate an object, changing only a few of its characteristics while leaving the rest unaltered.</li>
+    <li>
+    <strong>toString()</strong> - This function returns a string containing all of the data class's parameters.</li>
+    </ul><p>To ensure consistency, data classes must meet the following requirements:</p><ul>
+    <li>At least one parameter is required for the primary constructor.</li>
+    <li>val or var must be used for all primary constructor parameters.</li>
+    <li>Abstract, open, sealed, or inner data classes are not possible.</li>
+    <li>Only interfaces may be implemented by data classes.</li>
+    </ul><p><strong>Example:</strong></p><pre><code class="language-plaintext hljs">data class Sample(var input1 : Int, var input2 : Int)</code></pre><p>The above code snippet creates a data class Sample with two parameters.</p><pre><code class="language-plaintext hljs">fun main(agrs: Array&lt;String&gt;) {  
+       val temp = Sample(1, 2)  
+       println(temp)  
+    }&nbsp; </code></pre><p>Here, we create an instance of the data class Sample and pass the parameters to it.</p><p><strong>Output:-</strong></p><pre><code class="language-plaintext hljs">Sample(input1=1, input2=2)</code></pre>
+              </article>
+            </section>
+              <div class="ibpage__download-container">
+      <div class="ibpage__download-banner">
+        <div class="ibpage__download-text">
+          <i class="icon-bell"></i>
+          <span>
+            You can download a PDF version of Kotlin Interview Questions.
+          </span>
+        </div>
+        <div class="ibpage__download-action">
+          
+    <a class=" hidden ibpage__downloadable-a ibpage__downloadable download-pdf gtm-track-element" data-source="in_content" data-gtm-parent="Download PDF" data-gtm-allowed-actions="click">
+      <span>
+        <img class="lazy-elem ibpage__downloadable-img" width="24" height="24" data-src="https://assets.interviewbit.com/assets/svg/download_icon-cd2d5b54bc600ee83352693330804e7d9324dddf41fc105cd5e3176e92f3cd36.svg.gz">
+      </span>
+      <span class=" text">
+        Download PDF
+      </span>
+    </a>
+    
+    <a class="auth-trigger gtm-track-element ibpage__downloadable ibpage__downloadable-a enforce-signin" onclick="window.trackGaEvent('onboarding', 'signin-cta-clicked', 'Download PDF')" style="" href="javascript:void(0)" data-action="flow-trigger" data-target="auth" data-mode="login" data-gtm-element="login" data-gtm-allowed-actions="click hover" data-source="in_content">
+      
+      <span class="gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Download PDF" data-gtm-section="pdf" data-gtm-sub-product="interview_guides" data-gtm-text="Download PDF">
+        <img class="ibpage__downloadable-img" width="24" height="24" data-src="https://assets.interviewbit.com/assets/svg/download_icon-cd2d5b54bc600ee83352693330804e7d9324dddf41fc105cd5e3176e92f3cd36.svg.gz" src="https://assets.interviewbit.com/assets/svg/download_icon-cd2d5b54bc600ee83352693330804e7d9324dddf41fc105cd5e3176e92f3cd36.svg.gz">
+      </span>
+      <span class=" text gtm-track-element" data-gtm-allowed-actions="click" data-gtm-element="Download pdf button" data-gtm-section="pdf" data-gtm-sub-product="interview_guides" data-gtm-text="Download PDF">
+        Download PDF
+      </span>
+    
+    </a>
+    
+    <a id="auto-download-modal-trigger" class="modal-trigger hidden gtm-track-element" data-gtm-allowed-actions="click" data-gtm-type="button" data-gtm-parent="auto-download-modal" data-action="modal-open" data-target="auto-download-modal" onclick="">
+      
+      &nbsp;
+    
+    </a>
+    <div id="auto-download-modal" class="sr-modal ">
+      <div class="sr-modal__content sr-modal__content--center ">
+        <div class="sr-modal__body ">
+          
+      <div class="p-h-10 p-v-10 gtm-track-element">
+        <h3>Download PDF</h3>
+        <hr>
+        <div class="m-v-10 text-center">
+          Your requested download is ready!<br>
+          Click
+          <a class="pointer" data-source="in_content" data-action="start-download" data-gtm-parent="Download PDF" data-gtm-allowed-actions="click">
+            here
+          </a>
+          to download.
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    </div>
+    
+        </div>
+      </div>
+    </div>
+    
+            <section class="ibpage-article-header" id="null-safety-in-kotlin">
+              <h3>4. Explain the concept of null safety in Kotlin.</h3>
+              <article class="ibpage-article">
+                <p>Kotlin's type system aims to eradicate null references from the code. If a program throws NullPointerExceptions at runtime it might result in application failure or system crashes. If the Kotlin compiler finds a null reference it throws a NullPointerException.</p><figure class="image image_resized" style="width:75%;"><img data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/315/original/null_safety_in_Kotlin.jpg?1633686211" class="" src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/315/original/null_safety_in_Kotlin.jpg?1633686211"></figure><p>The Kotlin type system distinguishes between references that can hold null (nullable references) and those that cannot (non-null references). Null cannot be stored in a String variable. We get a compiler error if we try to assign null to the variable.&nbsp;</p><pre><code class="language-plaintext hljs">var a: String = "interview"
+    a = null // results in compilation error</code></pre><p>If we want the above string to be able to hold null value as well, we can declare it of type nullable using the ‘?’ operator after the String keyword as follows :</p><pre><code class="language-plaintext hljs">var a: String? = "interview"
+    a = null // no compilation error</code></pre><p>Kotlin provides Safe Call (?.), Elvis (?:) and Not Null Assertion (!!) operators which define what needs to be done in case of a null encounter. This makes the code more reliable and less prone to errors. Thus, Kotlin enforces null safety by having nullable, non-nullable type variables and the different operators to tackle null encounters.</p>
+              </article>
+            </section>
+            <section class="ibpage-article-header" id="safe-call-elvis-and-not-null-assertion-operator-in-kotlin">
+              <h3>5. Explain Safe call,  Elvis and Not Null Assertion operator in the context of Kotlin.</h3>
+              <article class="ibpage-article">
+                <p><strong>Safe Call operator ( ?. )</strong> -&nbsp; Null comparisons are trivial, but the number of nested if-else expressions can be exhausting. So, in Kotlin, there's a Safe call operator,?, that simplifies things by only doing an action when a specified reference holds a non-null value. It allows us to use a single expression to perform both a null check and a method call.</p><figure class="image image_resized" style="width:75%;"><img data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/316/original/Safe_Call_operator.jpg?1633686741" class="" src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/316/original/Safe_Call_operator.jpg?1633686741"></figure><p>For example,</p><p>The following expression in Kotlin</p><pre><code class="language-plaintext hljs">name?.toLowerCase() </code></pre><p>is equivalent to the following</p><pre><code class="language-plaintext hljs">if(name != null)&nbsp;
+       name.toLowerCase()
+    else
+       null </code></pre><p><strong>Elvis Operator ( ?: ) </strong>- When the original variable is null, the Elvis operator is used to return a non-null value or a default value. In other words, the elvis operator returns the left expression if it is not null, otherwise, it yields the right expression. Only if the left-hand side expression is null is the right-hand side evaluated.&nbsp;</p><figure class="image image_resized" style="width:75%;"><img data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/318/original/Elvis_Operator.jpg?1633686961" class="" src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/318/original/Elvis_Operator.jpg?1633686961"></figure><p>For example,</p><p>The following expression in Kotlin</p><pre><code class="language-plaintext hljs">val sample1 = sample2 ?: "Undefined"</code></pre><p>is equivalent to the following</p><pre><code class="language-plaintext hljs">val sample1 = if(sample2 != null)&nbsp;
+           sample2
+         else&nbsp;
+           "Undefined"</code></pre><p>Furthermore, on the right side of the Elvis operator, we may use throw and return expressions, which is particularly handy in functions. As a result, instead of returning a default value on the right side of the Elvis operator, we can throw an exception. For example,</p><pre><code class="language-plaintext hljs">val sample1 = sample2 ?: throw IllegalArgumentException("Invalid")</code></pre><p><strong>Not Null Assertion Operator ( !! )</strong> - If the value is null, the not null assertion (!!) operator changes it to a non-null type and throws an exception.</p><p>Anyone who wants a NullPointerException can ask for it explicitly with this operator.</p><p>For example,</p><pre><code class="language-plaintext hljs">// KOTLIN
+    fun main(args: Array&lt;String&gt;) {
+       var sample : String?  = null
+       str!!.length
+    }</code></pre><p>The above code snippet gives the following output:-</p><pre><code class="language-plaintext hljs">Exception in thread "main" kotlin.KotlinNullPointerException</code></pre>
+              </article>
+            </section>
+            <section class="ibpage-article-header" id="kotlin-vs-java">
+              <h3>6. Differentiate between Kotlin and Java.</h3>
+              <article class="ibpage-article">
+                <figure class="image image_resized" style="width:75%;"><img data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/325/original/kotlin-vs-java.jpg?1633688649" class="" src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/325/original/kotlin-vs-java.jpg?1633688649"></figure><p>Following are the differences between Kotlin and Java:-</p><figure class="table"><table>
+    <thead><tr>
+    <th>Basis</th>
+    <th>Kotlin</th>
+    <th>Java</th>
+    </tr></thead>
+    <tbody>
+    <tr>
+    <th>Null Safety</th>
+    <td>By default, all sorts of variables in Kotlin are non-nullable (that is, we can't assign null values to any variables or objects). Kotlin code will fail to build if we try to assign or return null values. If we absolutely want a null value for a variable, we can declare it as follows: value num: Int? = null&nbsp;</td>
+    <td>NullPointerExceptions are a big source of annoyance for Java developers. Users can assign null to any variable, however, when accessing an object reference with a null value, a null pointer exception is thrown, which the user must manage.</td>
+    </tr>
+    <tr>
+    <th>Coroutines Support&nbsp;</th>
+    <td>We can perform long-running expensive tasks in several threads in Kotlin, but we also have coroutines support, which halt execution at a given moment without blocking threads while doing long-running demanding operations.</td>
+    <td>The corresponding thread in Java will be blocked anytime we launch a long-running network I/0 or CPU-intensive task. Android is a single-threaded operating system by default. Java allows you to create and execute numerous threads in the background, but managing them is a difficult operation.</td>
+    </tr>
+    <tr>
+    <th>Data Classes&nbsp;</th>
+    <td>If we need to have data-holding classes in Kotlin, we may define a class with the keyword "data" in the class declaration, and the compiler will take care of everything, including constructing constructors, getter, and setter methods for various fields.</td>
+    <td>Let's say we need a class in Java that only holds data and nothing else. Constructors, variables to store data, getter and setter methods, hashcode(), function toString(), and equals() functions are all required to be written explicitly by the developer.</td>
+    </tr>
+    <tr>
+    <th>Functional Programming</th>
+    <td>Kotlin is procedural and functional programming (a programming paradigm where we aim to bind everything in functional units) language that has numerous useful features such as lambda expressions, operator overloading, higher-order functions, and lazy evaluation, among others.</td>
+    <td>Java does not allow functional programming until Java 8, however it does support a subset of Java 8 features when developing Android apps.</td>
+    </tr>
+    <tr>
+    <th>Extension Functions</th>
+    <td>Kotlin gives developers the ability to add new functionality to an existing class. By prefixing the name of a class to the name of the new function, we can build extended functions.</td>
+    <td>In Java, we must create a new class and inherit the parent class if we want to enhance the functionality of an existing class. As a result, Java does not have any extension functions.</td>
+    </tr>
+    <tr>
+    <th>Data Type Inference&nbsp;</th>
+    <td>We don't have to declare the type of each variable based on the assignment it will handle in Kotlin. We can specify explicitly if we want to.</td>
+    <td>When declaring variables in Java, we must declare the type of each variable explicitly.</td>
+    </tr>
+    <tr>
+    <th>Smart Casting</th>
+    <td>Smart casts in Kotlin will take care of these casting checks with the keyword "is-checks," which checks for immutable values and conducts implicit casting.</td>
+    <td>We must examine the type of variables in Java and cast them appropriately for our operation.</td>
+    </tr>
+    <tr>
+    <th>Checked Exceptions</th>
+    <td>We don't have checked exceptions in Kotlin. As a result, developers do not need to declare or catch exceptions, which has both benefits and drawbacks.</td>
+    <td>We have checked exceptions support in Java, which enables developers to declare and catch exceptions, resulting in more robust code with better error handling.</td>
+    </tr>
+    </tbody>
+    </table></figure>
+              </article>
+            </section>
+            <section class="ibpage-article-header" id="types-of-constructors-in-kotlin">
+              <h3>7. What are the different types of constructors available in Kotlin? Explain them with proper examples.</h3>
+              <article class="ibpage-article">
+                <p>There are two types of Kotlin constructors:</p><figure class="image"><img data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/324/original/Kotlin_constructors.jpg?1633688427" class="" src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/324/original/Kotlin_constructors.jpg?1633688427"></figure><ul><li>
+    <strong>Primary Constructor&nbsp; - </strong>This type of constructor is initialised in the class header and is provided after the class name. It is declared using the “constructor” keyword. Parameters are optional in this type of constructor. For example,</li></ul><pre><code class="language-plaintext hljs">class Sample constructor(val a: Int, val b: Int) {
+       // code
+    }</code></pre><p>If no annotations or access modifiers are provided, the constructor keyword can be omitted. The initialization code can be placed in a separate initializer block prefixed with the init keyword because the primary constructor cannot contain any code.&nbsp;</p><p>For example,&nbsp;</p><pre><code class="language-plaintext hljs">// KOTLIN
+    fun main(args: Array&lt;String&gt;) {
+       val s1 = Sample(1, 2)
+    }
+    class Sample(a : Int , b: Int) {
+       val p: Int
+       var q: Int
+       // initializer block
+       init {
+           p = a
+           q = b
+           println("The first parameter value is : $p")
+           println("The second parameter value is : $q")
+       }
+    }</code></pre><p><strong>Output:-</strong></p><pre><code class="language-plaintext hljs">The first parameter value is: 1
+    The second parameter value is: 2</code></pre><p><strong>Explanation -</strong> The values 1 and 2 are supplied to the constructor arguments <strong>a</strong> and<strong> b</strong> when the object <strong>s1 </strong>is created for the class Sample. In the class <strong>p</strong> and <strong>q</strong>, two attributes are specified. The initializer block is called when an object is created, and it not only sets up the attributes but also prints them to the standard output.</p><ul><li>
+    <strong>Secondary Constructor -</strong> Secondary constructors allow for the initialization of variables as well as the addition of logic to the class. They have the constructor keyword prefixed to them. For example,</li></ul><pre><code class="language-plaintext hljs">// KOTLIN
+    fun main(args: Array&lt;String&gt;) {
+       val s1 = Sample(1, 2)
+    }
+    class Sample {
+       constructor(a: Int, b: Int) {
+           println("The first parameter value is : $p")
+           println("The second parameter value is : $q")
+       }
+    }</code></pre><p><strong>Output:-</strong></p><pre><code class="language-plaintext hljs">The first parameter value is: 1
+    The second parameter value is: 2</code></pre><p>The compiler determines which secondary constructor will be called based on the inputs provided. We don't specify which constructor to use in the above program, so the compiler chooses for us.</p><p>In Kotlin, a class can contain one or more secondary constructors and at most one primary constructor. The primary constructor initializes the class, while the secondary constructor initialises the class and adds some additional logic.</p>
+              </article>
+            </section>
+            <section class="ibpage-article-header" id="explain-various-methods-to-iterate-over-any-data-structure-in-kotlin-with-examples">
+              <h3>8. Explain the various methods to iterate over any data structure in Kotlin with examples.</h3>
+              <article class="ibpage-article">
+                <p>Following are the different ways to iterate over any data structure in Kotlin :</p><ul><li>
+    <strong>For Loop -</strong> The for loop is used to scan any data structure that supplies an iterator in this case. It is not used in the same way as the for loop in other programming languages such as Java or C.</li></ul><p>In Kotlin, the for loop has the following <strong>Syntax</strong>:</p><pre><code class="language-plaintext hljs">for(item in collection) {
+         // code&nbsp;
+    }</code></pre><p>Here, collection refers to the data structure to be iterated and item refers to each element of the data structure.</p><p>For example,</p><pre><code class="language-plaintext hljs">// KOTLIN
+    fun main(args: Array&lt;String&gt;) {
+       var numbersArray = arrayOf(1,2,3,4,5,6,7,8,9,10)
+     
+       for (num in numbersArray){
+           if(num % 2 == 0){
+               print("$num ")
+           }
+       }
+    }</code></pre><p><strong>Output -</strong></p><pre><code class="language-plaintext hljs">2 4 6 8 10</code></pre><ul><li>
+    <strong>While Loop -</strong> It is made up of a code block and a condition to be checked for each iteration. First, the while condition is assessed, and if it is true, the code within the block is executed. Because the condition is verified every time before entering the block, it repeats until the condition turns false. The while loop can be thought of as a series of if statements that are repeated.</li></ul><p>The while loop's syntax is as follows:</p><pre><code class="language-plaintext hljs">while(condition) {
+             // code&nbsp;
+    }</code></pre><p>For example,</p><pre><code class="language-plaintext hljs">// KOTLIN
+    fun main(args: Array&lt;String&gt;) {
+       var number = 1
+       while(number &lt;= 5) {
+           println(number)
+           number++;
+       }
+    }</code></pre><p><strong>Output -</strong></p><pre><code class="language-plaintext hljs">1
+    2
+    3
+    4
+    5</code></pre><ul><li>
+    <strong>Do While Loop -</strong> The condition is assessed after all of the statements inside the block have been executed. If the do-while condition is true, the code block is re-executed. As long as the expression evaluates to true, the code block execution procedure is repeated. The loop ends if the expression becomes false, and control is passed to the sentence following the do-while loop. Because it verifies the condition after the block is executed, it's also known as a post-test loop.</li></ul><p>The do-while loop's syntax is as follows:</p><pre><code class="language-plaintext hljs">do {
+         // code&nbsp;
+    {
+    while(condition)</code></pre><p>For example,</p><pre><code class="language-plaintext hljs">// KOTLIN
+    fun main(args: Array&lt;String&gt;) {
+       var number = 4
+       var sum = 0
+     
+       do {
+           sum += number
+           number--
+       }while(number &gt; 0)
+       println("Sum of first four natural numbers is $sum")
+    }</code></pre><p><strong>Output -</strong></p><pre><code class="language-plaintext hljs">Sum of first four natural numbers is 10</code></pre>
+              </article>
+            </section>
+            <section class="ibpage-article-header" id="concatenate-two-strings-in-kotlin">
+              <h3>9. How can you concatenate two strings in Kotlin?</h3>
+              <article class="ibpage-article">
+                <p>Following are the different ways by which we can concatenate two strings in Kotlin:</p><figure class="image image_resized" style="width:75%;"><img data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/326/original/concatenate-two-strings-kotlin.jpg?1633690227" class="" src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/326/original/concatenate-two-strings-kotlin.jpg?1633690227"></figure><p><strong>Using String Interpolation:- </strong>We use the technique of string interpolation to concatenate the two strings. Basically, we substitute the strings in place of their placeholders in the initialisation of the third string.</p><pre><code class="language-plaintext hljs">val s1 = "Interview"
+    val s2 = "Bit"
+    val s3 = "$s1 $s2" // stores "Interview Bit"</code></pre><p><strong>Using the + or plus() operator:- </strong>We use the ‘+’ operator to concatenate the two strings and store them in a third variable.</p><pre><code class="language-plaintext hljs">val s1 = "Interview"
+    val s2 = "Bit"
+    val s3 = s1 + s2 // stores "InterviewBit"
+    val s4 = s1.plus(s2) // stores "InterviewBit"</code></pre><p><strong>Using StringBuilder:- </strong>We concatenate two strings using the StringBuilder object. First, we append the first string and then the second string.&nbsp;</p><pre><code class="language-plaintext hljs">val s1 = "Interview"
+    val s2 = "Bit"
+    val s3 =&nbsp; StringBuilder()  &nbsp;&nbsp; 
+    s3.append(s1).append(s2)
+    val s4 = s3.toString() // stores "InterviewBit"</code></pre>
+              </article>
+            </section>
+            <section class="ibpage-article-header" id="kotlin-extension-function">
+              <h3>10. What do you understand about function extension in the context of Kotlin? Explain.</h3>
+              <article class="ibpage-article">
+                <p>In Kotlin, we can add or delete method functionality using extensions, even without inheriting or altering them. Extensions are statistically resolved. It provides a callable function that may be invoked with a dot operation, rather than altering the existing class.</p><figure class="image image_resized" style="width:75%;"><img data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/327/original/kotlin_extension_function.jpg?1633690676" class="" src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/327/original/kotlin_extension_function.jpg?1633690676"></figure><p><strong>Function Extension -</strong> Kotlin allows users to specify a method outside of the main class via function extension. We'll see how the extension is implemented at the functional level in the following example:</p><pre><code class="language-plaintext hljs">// KOTLIN
+    class Sample {
+     var str : String = "null"
+       
+     fun printStr() {
+         print(str)
+     }        
+    }
+    fun main(args: Array&lt;String&gt;) {
+     var  a = Sample()
+     a.str = "Interview"
+     var  b = Sample()
+     b.str = "Bit"
+     var  c = Sample()
+     c.str = a.add(b)
+     c.printStr()
+    }
+    // function extension
+    fun Sample.add(a : Sample):String{
+     var temp = Sample()
+     temp.str = this.str + " " +a.str
+     return temp.str
+    }</code></pre><p><strong>Output:-</strong></p><pre><code class="language-plaintext hljs">Interview Bit</code></pre><p><strong>Explanation:-</strong></p><p>We don't have a method named "addStr" inside the "Sample" class in the preceding example, but we are implementing the same method outside of the class. This is all because of function extension.</p>
+              </article>
+            </section>
+            <section class="ibpage-article-header" id="companion-object-in-kotlin">
+              <h3>11. What do you understand about Companion Object in the context of Kotlin?</h3>
+              <article class="ibpage-article">
+                <p>In some languages, such as Java, the static keyword is used to declare class members and utilise them without creating an object, i.e. by simply calling them by their class name. In Kotlin, there is nothing called the “static” keyword. So, if we want to achieve the functionality of static member functions, we use the companion objects. This is also referred to as Object Extension.&nbsp;</p><figure class="image image_resized" style="width:75%;"><img data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/328/original/Companion_Object.jpg?1633690991" class="" src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/328/original/Companion_Object.jpg?1633690991"></figure><p>We must use the companion keyword in front of the object definition to construct a companion object.</p><pre><code class="language-plaintext hljs">// Syntax in KOTLIN
+    class CompanionClass {
+    
+        companion object CompanionObjectName {
+          // code
+        }
+    }
+    val obj = CompanionClass.CompanionObjectName</code></pre><p>We can also remove the CompanionObject name and replace it with the term companion, resulting in the companion object's default name being Companion, as shown below:</p><pre><code class="language-plaintext hljs">// KOTLIN
+    class CompanionClass {
+       companion object {
+         // code
+       }
+    }
+    val obj = CompanionClass.Companion</code></pre><p>All the required static member functions and member variables can be kept inside the companion object created. For example,</p><pre><code class="language-plaintext hljs">class Sample {
+       companion object Test {
+           var a: Int = 1
+           fun testFunction() = println("Companion Object’s Member function called.")
+       }
+    }
+    fun main(args: Array&lt;String&gt;) {
+       println(Sample.a)
+       Sample.testFunction()
+    }</code></pre><p><strong>Output:-</strong></p><pre><code class="language-plaintext hljs">1
+    Companion Object’s Member function called.</code></pre>
+              </article>
+            </section>
+            <section class="ibpage-article-header" id="difference-between-open-and-public-keywords-in-kotlin">
+              <h3>12. Differentiate between open and public keywords in Kotlin.</h3>
+              <article class="ibpage-article">
+                <p>The keyword “open” refers to the term "open for expansion". The open annotation on a class is the polar opposite of the final annotation in Java: it allows others to inherit from it. By default, a class cannot be inherited in Kotlin. In Kotlin, an open method signifies that it can be overridden, whereas it cannot be by default. Instead, any methods in Java can be overridden by default.</p><p>In Kotlin, all the classes are final by default. If no visibility modifier is specified, the public is used by default, which means our declarations will be accessible everywhere inside the program.</p>
+              </article>
+            </section>
+            <section class="ibpage-article-header" id="when-keyword-in-kotlin">
+              <h3>13. Explain about the “when” keyword in the context of Kotlin.</h3>
+              <article class="ibpage-article">
+                <p>The “when” keyword is used in Kotlin to substitute the switch operator in other languages such as Java. When a certain condition is met, a specific block of code must be run. Inside the when expression, it compares all of the branches one by one until a match is discovered. After finding the first match, it proceeds to the conclusion of the when block and executes the code immediately following the when block. We do not need a break statement at the end of each case, unlike switch cases in Java or any other programming language.</p><figure class="image image_resized" style="width:75%;"><img data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/329/original/when_keyword.jpg?1633691261" class="" src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/329/original/when_keyword.jpg?1633691261"></figure><p>For example,</p><pre><code class="language-plaintext hljs">// KOTLIN
+    fun main(args: Array&lt;String&gt;) {
+       
+       var temp = "Interview"
+       when(temp) {
+           "Interview" -&gt; println("Interview Bit is the solution.")
+           "Job" -&gt; println("Interview is the solution.")
+           "Success" -&gt; println("Hard Work is the solution.")
+       }
+    }</code></pre><p><strong>Output:-</strong></p><pre><code class="language-plaintext hljs">Interview Bit is the solution.</code></pre><p><strong>Explanation:-</strong> In the above code, the variable temp has the value “Interview”. The when condition matches for the exact value as that of temp’s and executes the corresponding code statements. Thus, “Interview Bit is the solution” is printed.</p>
+              </article>
+            </section>
+            <section class="ibpage-article-header" id="advantages-of-kotlin-over-java">
+              <h3>14. What are the advantages of Kotlin over Java?</h3>
+              <article class="ibpage-article">
+                <p>Following are the advantages of Kotlin over Java:-</p><figure class="image image_resized" style="width:75%;"><img data-src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/330/original/advantages_of_Kotlin_over_Java.jpg?1633691398" class="" src="https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/001/330/original/advantages_of_Kotlin_over_Java.jpg?1633691398"></figure><ul>
+    <li>
+    <strong>Data class:</strong> In Java, you must create getters and setters for each object, as well as properly write hashCode (or allow the IDE to build it for you, which you must do every time you update the class), toString, and equals. Alternatively, you could utilize lombok, but that has its own set of issues. In Kotlin, data classes take care of everything.</li>
+    <li>
+    <strong>Patterns of getter and setter:</strong> In Java, for each variable, you use it for, rewrite the getter and setter methods. You don't have to write getter and setter in kotlin, and if you must, custom getter and setter take a lot less typing. There are additional delegates for identical getters and setters.</li>
+    <li>
+    <strong>Extension Functions:</strong> In Java, there is no support for extension functions. Kotlin on the other hand provides support for extension functions which makes the code more clear and cleaner.</li>
+    <li>
+    <strong>Support for one common codebase:</strong> You may extract one common codebase that will target all of them at the same time using the Kotlin Multi-Platform framework.</li>
+    <li>
+    <strong>Support for Null Safety:</strong> Kotlin has built-in null safety support, which is a lifesaver, especially on Android, which is full of old Java-style APIs.</li>
+    <li>
+    <strong>Less prone to errors: </strong>There is less space for error because it is more concise and expressive than Java.</li>
+    </ul>
+              </article>
+            </section>
+    
+      </div>
+</body>
+</html>

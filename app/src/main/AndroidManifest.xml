@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lunartechnolabs.a1000gkquestionsanswer">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.1000GKQuestionsAnswer">
+        <activity
+            android:name=".activities.McqActivity"
+            android:exported="false"
+            android:label="MCQ"
+            android:theme="@style/Theme.1000GKQuestionsAnswer.NoActionBar" />
+        <activity
+            android:name=".activities.QueAnsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_que_ans"
+            android:theme="@style/Theme.1000GKQuestionsAnswer.NoActionBar" />
+        <activity
+            android:name=".activities.DashBoard"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.1000GKQuestionsAnswer.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1844978836909273~4158217105" />
+    </application>
+
+</manifest>
